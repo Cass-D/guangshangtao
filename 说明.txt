@@ -1,0 +1,48 @@
+注意：1.每次更改需要说明，更改地方
+
+  本数据库包含4个表
+
+用户表userinfo：选填sex,地址（快递，维护），
+#	名称	数据类型	长度	默认	注释
+1	userid	INT	11	AUTO_INCREMENT	用户ID
+2	username	VARCHAR	32	无默认值	用户名
+3	password	VARCHAR	32	无默认值	用户密码
+4	email	VARCHAR	64	Null	用户邮箱
+5	school	VARCHAR	64	无默认值	用户所在学校
+6	court	VARCHAR	64	Null	用户所在院系
+7	professional	VARCHAR	64	Null	用户在学专业
+8	phone	VARCHAR	32	Null	用户号码
+
+订单表：
+#	名称	数据类型	长度	默认	注释
+1	orderid	INT	11	AUTO_INCREMENT	ID
+2	ordertime	TIMESTAMP		无默认值	订单时间
+3	Userid	int	11	无默认值	用户ID外键
+					
+
+
+
+商品信息表shopinfo：
+#	名称	数据类型	长度	默认	注释
+1	Shopid	INT	11	AUTO_INCREMENT	商品ID
+2	Shopname	VARCHAR	64	无默认值	商品名
+3	Des	VARCHAR	1024	无默认值	描述
+4	Username	VARCHAR	64	无默认值	发布者姓名
+5	Userphne	VARCHAR	32	无默认值	用户电话
+6	category	VARCHAR	64	无默认值	商品类别
+7	Picture	VARCHAR	1024	无默认值	图片
+8	Price	VARCHAR	64	无默认值	价格
+9	Put_time	TIMESTAMP		CURRENT_TIMESTAMP	发布时间
+10	Shop_status	INT		1	商品是否显示
+
+
+
+用户评论表messages：
+#	名称	数据类型	长度	默认	注释
+1	messageid	INT	11	AUTO_INCREMENT	ID
+2	content	VARCHAR	1024	无默认值	留言内容
+3	username	VARCHAR	1024	无默认值	留言者姓名
+4	receivename	VARCHAR	32	无默认值	接收留言
+5	Leave_time	TIMESTAMP		CURRENT_TIMESTAMP	留言时间
+6	Leave_status	INT		1	评论是否显示
+
